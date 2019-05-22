@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta charset="utf-8">
+	<link href="https://cdn.bootcss.com/materialize/0.100.0/css/materialize.min.css" rel="stylesheet">
+  <style type="text/css">
+  .myself li{
+    transition: all .2s;
+  }
+  .myself li:hover{
+    background:#4dd0e1;
+  }
+  #slide-out{
+    transition:width .4s;
+  }
+</style>
+</head>
+<body>
+<ul id="slide-out" class="side-nav" style="">
+    <li><div class="userView">
+      <div class="background">
+        <img src="https://b-ssl.duitang.com/uploads/item/201901/13/20190113212226_vicgq.jpg" style="position: absolute;width:100%;">
+      </div>
+      <a href="#!user"><img class="circle" src="https://b-ssl.duitang.com/uploads/item/201903/18/20190318142440_wcuqf.jpg"></a>
+      <a href="#!name"><span class="white-text lighten-2" style="font-size:25px">Username</span></a>
+      <a href="#!email"><span class="white-text email">XXXX@XXX.XXX</span></a>
+    </div></li>
+    <div class="myself">
+      <li><a class="waves-effect" href="#!">主页</a></li>
+      <li><a class="waves-effect" href="#!">我的中心</a></li>
+      <li><a class="waves-effect" href="#!">充值X币</a></li>
+      <li><a class="waves-effect" href="#!">我的消息</a></li>
+      <li><div class="divider" style="height: 2px;"></div></li>
+      <li><a class="waves-effect" href="#">关于我们</a></li>
+      <li><a class="waves-effect" href="#!">帮助</a></li>
+    </div>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/materialize/0.100.0/js/materialize.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+       /*$('.button-collapse').sideNav({
+        menuWidth: 300, // Default is 240
+        edge: 'left', // Choose the horizontal origin
+        closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        draggable: true // Choose whether you can drag to open on touch screens
+      }
+    );*/
+    $(".button-collapse").sideNav({
+     
+    });
+     $(window).on('resize',function(){
+        if($(window).width()<600){
+           $("#slide-out").css('width',"260px")
+        }else{
+          $("#slide-out").css('width',"350px")
+        }
+    })
+  })
+</script>
+</body>
+</html>
